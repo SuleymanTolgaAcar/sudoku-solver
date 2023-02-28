@@ -1,0 +1,83 @@
+.sudoku {
+  animation: var(--bg-animation);
+  background: var(--bg);
+  background-size: 200%;
+  display: grid;
+  grid-template-columns: repeat(9, var(--cell-size));
+  grid-template-rows: repeat(9, var(--cell-size));
+  width: calc(var(--cell-size) * 9);
+  height: calc(var(--cell-size) * 9);
+  margin: 20px;
+  border-radius: var(--border-radius);
+}
+
+.cell {
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
+  margin: var(--grid-margin-normal);
+  margin-right: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  line-height: calc(var(--cell-size) - var(--grid-margin-outer));
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* .cell:active {
+  background-color: var(--bg-color);
+} */
+
+.cell:nth-child(-n + 9),
+.cell:nth-child(-n + 36):nth-child(n + 28),
+.cell:nth-child(-n + 63):nth-child(n + 55) {
+  margin-top: var(--grid-margin-outer);
+}
+
+.cell:nth-child(n + 73) {
+  margin-bottom: var(--grid-margin-outer);
+}
+
+.cell:nth-child(-n + 27):nth-child(n + 19),
+.cell:nth-child(-n + 54):nth-child(n + 46) {
+  margin-bottom: 0px;
+}
+
+.cell:nth-child(3n + 1) {
+  margin-left: var(--grid-margin-outer);
+}
+
+.cell:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.cell:nth-child(9n) {
+  margin-right: var(--grid-margin-outer);
+}
+
+.cell:nth-child(1) {
+  border-top-left-radius: var(--border-radius);
+}
+
+.cell:nth-child(9) {
+  border-top-right-radius: var(--border-radius);
+}
+
+.cell:nth-child(73) {
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.cell:nth-child(81) {
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.cell.active {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* .cell.wrong {
+  background-color: rgba(255, 0, 0, 0.5);
+} */

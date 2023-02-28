@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+:root {
+  --cell-size: 50px;
+  --border-radius: 15px;
+  --grid-margin-normal: 1px;
+  --grid-margin-outer: 4px;
+  --button-margin: 2px;
+  --button-border-radius: 10px;
+  --gradient-color1: #ffc800;
+  --gradient-color2: #ff5800;
+  --bg: linear-gradient(
+    to right,
+    var(--gradient-color1),
+    var(--gradient-color2),
+    var(--gradient-color1)
+  );
+  --bg-animation: background-pan 8s linear infinite;
+  --bg-color: #001524;
+  --text-color-light: #ffecd1;
+  --text-color-dark: var(--bg-color);
+  --button-height: 45px;
+  --button-width: 110px;
+  --number-button-size: 70px;
+  --number-button-gap: 10px;
+  --navbar-height: calc(
+    var(--button-height) + (var(--button-margin) * 2) + 15px
+  );
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+* {
+  font-family: "Lato";
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  user-select: none;
+}
+
+button {
+  animation: var(--bg-animation);
+  background: var(--bg);
+  background-size: 200%;
+  border-radius: var(--button-border-radius);
+  border: none;
+  height: var(--button-height);
+  width: var(--button-width);
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+}
+
+button span {
+  background-color: var(--bg-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  color: var(--text-color-light);
+  margin: var(--button-margin);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover span {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+button:hover span {
+  transform: scale(1.2);
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}

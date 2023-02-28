@@ -1,0 +1,77 @@
+nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.1px;
+  height: var(--navbar-height);
+  background-color: var(--bg-color);
+}
+
+.navbar-container {
+  animation: var(--bg-animation);
+  background: var(--bg);
+  background-size: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav .create {
+  margin-left: 25px;
+  margin-right: auto;
+}
+
+.diffuculty-container {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  animation: var(--bg-animation);
+  background: var(--bg);
+  background-size: 200%;
+  border-radius: var(--button-border-radius);
+  position: relative;
+}
+
+select {
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
+  margin: var(--button-margin);
+  border-radius: var(--button-border-radius);
+  height: calc(var(--button-height) - (var(--button-margin) * 2));
+  width: calc(var(--button-width) - (var(--button-margin) * 2));
+  font-size: 1rem;
+  padding-left: 5px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+select option {
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
+  border: none;
+  outline: none;
+  border-radius: var(--button-border-radius);
+}
+
+select:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+select:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.generate {
+  margin-right: 25px;
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 10px;
+}
+
+.dropdown-icon path {
+  fill: var(--text-color-light);
+}

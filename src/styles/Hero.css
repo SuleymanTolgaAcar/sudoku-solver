@@ -1,0 +1,145 @@
+.hero {
+  margin-top: var(--navbar-height);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px;
+  margin-top: var(--navbar-height);
+}
+
+.all-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--number-button-gap);
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.number-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, var(--number-button-size));
+  grid-template-rows: repeat(4, var(--number-button-size));
+  gap: 10px;
+  grid-row-start: span 2;
+}
+
+.number-buttons button {
+  height: var(--number-button-size);
+  width: var(--number-button-size);
+  font-size: 1.75rem;
+}
+
+.instant-solve {
+  height: 30px;
+  width: 60px;
+  margin: var(--button-margin);
+  background-color: var(--bg-color);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  appearance: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.instant-solve-container {
+  animation: var(--bg-animation);
+  background: var(--bg);
+  background-size: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: none;
+  position: relative;
+}
+
+.instant-solve:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.instant-solve:hover::before {
+  transform: scale(1.1);
+}
+
+.instant-solve:checked {
+  background-color: transparent;
+}
+
+.instant-solve::before {
+  background-color: var(--gradient-color1);
+  content: "";
+  position: absolute;
+  top: var(--button-margin);
+  left: var(--button-margin);
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.instant-solve:checked::before {
+  transform: translateX(30px);
+  background-color: var(--gradient-color2);
+}
+
+.speed-slider {
+  appearance: none;
+  animation: var(--bg-animation);
+  background: var(--bg);
+  background-size: 200%;
+  width: 150px;
+  height: 5px;
+  border-radius: 5px;
+  outline: none;
+  overflow: visible;
+}
+
+.speed-slider::-webkit-slider-runnable-track {
+  appearance: none;
+}
+
+.speed-slider::-webkit-slider-thumb {
+  appearance: none;
+  background-color: var(--gradient-color1);
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.speed-slider:hover::-webkit-slider-thumb {
+  transform: scale(1.1);
+}
+
+label {
+  color: var(--text-color-light);
+  font-size: 1rem;
+}
+
+.btn-icon {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-icon path {
+  stroke: var(--text-color-light);
+}
