@@ -118,6 +118,7 @@ button:hover span {
     --grid-margin-normal: 2px;
     --grid-margin-outer: 6px;
     --button-margin: 3px;
+    --button-border-radius: 20px;
   }
 
   button {
