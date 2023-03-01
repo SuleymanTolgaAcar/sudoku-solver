@@ -84,9 +84,9 @@ const Provider = ({ children }) => {
     return true;
   }
 
-  function handleGenerate() {
+  function handleGenerate(diff = diffuculty) {
     setIsSolving(false);
-    setGrid(new Grid(generate(diffuculty)));
+    setGrid(new Grid(generate(diff)));
     setMoves([]);
     setIsEditing(false);
     setActiveCell(null);

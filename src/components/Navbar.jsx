@@ -24,7 +24,10 @@ function Navbar() {
             name="diffuculty"
             className="select-diffuculty"
             value={diffuculty}
-            onChange={(e) => setDiffuculty(e.target.value)}
+            onChange={(e) => {
+              setDiffuculty(e.target.value);
+              handleGenerate(e.target.value);
+            }}
           >
             <option value="basic">Basic</option>
             <option value="easy">Easy</option>
@@ -34,7 +37,7 @@ function Navbar() {
           </select>
           <AiFillCaretDown className="dropdown-icon" />
         </div>
-        <button className="generate" onClick={handleGenerate}>
+        <button className="generate" onClick={() => handleGenerate()}>
           <span className="btn-text">Generate</span>
         </button>
       </nav>

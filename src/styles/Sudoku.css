@@ -5,10 +5,10 @@
   display: grid;
   grid-template-columns: repeat(9, var(--cell-size));
   grid-template-rows: repeat(9, var(--cell-size));
-  width: calc(var(--cell-size) * 9);
+  width: calc((var(--cell-size) * 9));
   height: calc(var(--cell-size) * 9);
-  margin: 20px;
   border-radius: var(--border-radius);
+  overflow: visible;
 }
 
 .cell {

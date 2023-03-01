@@ -39,6 +39,9 @@
 
 * {
   font-family: "Lato";
+}
+
+button {
   overflow: hidden;
 }
 
