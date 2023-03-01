@@ -4,8 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  position: absolute;
-  top: 0;
+  margin-top: var(--navbar-height);
 }
 
 .all-buttons {
@@ -90,7 +89,7 @@
   left: var(--button-margin);
   height: 30px;
   width: 30px;
-  border-radius: 15px;
+  border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
 
@@ -119,8 +118,8 @@
   appearance: none;
   background-color: var(--gradient-color1);
   border-radius: 50%;
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -146,7 +145,76 @@ label {
 @media screen and (max-width: 800px) {
   .hero {
     flex-direction: column;
-    gap: 20px;
-    top: calc(var(--navbar-height) * 4);
+    justify-content: center;
+    margin-top: calc(var(--navbar-height) * 6);
+  }
+
+  .number-buttons button {
+    font-size: 1.4rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  .speed-slider {
+    width: 100px;
+  }
+
+  .instant-solve-container {
+    border-radius: 10px;
+  }
+
+  .instant-solve {
+    height: 20px;
+    width: 40px;
+    border-radius: 10px;
+  }
+
+  .instant-solve::before {
+    height: 20px;
+    width: 20px;
+  }
+
+  .instant-solve:checked::before {
+    transform: translateX(20px);
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .number-buttons button {
+    font-size: 2.5rem;
+  }
+
+  label {
+    font-size: 1.5rem;
+  }
+
+  .speed-slider {
+    width: 200px;
+  }
+
+  .instant-solve-container {
+    border-radius: 20px;
+  }
+
+  .instant-solve {
+    height: 40px;
+    width: 80px;
+    border-radius: 20px;
+  }
+
+  .instant-solve::before {
+    height: 40px;
+    width: 40px;
+  }
+
+  .instant-solve:checked::before {
+    transform: translateX(40px);
+  }
+
+  .speed-slider::-webkit-slider-thumb {
+    height: 30px;
+    width: 30px;
   }
 }

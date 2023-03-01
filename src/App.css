@@ -91,6 +91,36 @@ button:hover span {
 .App {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   position: relative;
+}
+
+@media screen and (max-width: 800px) {
+  button {
+    font-size: 0.8rem;
+  }
+
+  :root {
+    --cell-size: 40px;
+    --button-height: 30px;
+    --button-width: 80px;
+    --number-button-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  :root {
+    --cell-size: 70px;
+    --button-height: 60px;
+    --button-width: 140px;
+    --number-button-size: 100px;
+    --grid-margin-normal: 2px;
+    --grid-margin-outer: 6px;
+    --button-margin: 3px;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
 }

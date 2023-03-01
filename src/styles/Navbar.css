@@ -75,3 +75,15 @@ select:focus {
 .dropdown-icon path {
   fill: var(--text-color-light);
 }
+
+@media screen and (max-width: 800px) {
+  select {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  select {
+    font-size: 1.5rem;
+  }
+}
