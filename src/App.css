@@ -41,10 +41,6 @@
   font-family: "Lato";
 }
 
-button {
-  overflow: hidden;
-}
-
 body {
   background-color: var(--bg-color);
   user-select: none;
@@ -61,6 +57,7 @@ button {
   cursor: pointer;
   position: relative;
   font-size: 1rem;
+  overflow: hidden;
 }
 
 button span {
@@ -89,23 +86,20 @@ button:hover span {
 }
 
 .App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   position: relative;
 }
 
 @media screen and (max-width: 800px) {
-  button {
-    font-size: 0.8rem;
-  }
-
   :root {
     --cell-size: 40px;
     --button-height: 30px;
     --button-width: 80px;
     --number-button-size: 50px;
+  }
+
+  button {
+    font-size: 0.8rem;
   }
 }
 

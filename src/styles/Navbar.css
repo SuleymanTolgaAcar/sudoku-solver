@@ -1,8 +1,8 @@
 nav {
   display: flex;
   align-items: center;
-  margin-bottom: 1.1px;
   height: var(--navbar-height);
+  margin-bottom: 1.1px;
   background-color: var(--bg-color);
 }
 
@@ -10,10 +10,8 @@ nav {
   animation: var(--bg-animation);
   background: var(--bg);
   background-size: 200%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  height: calc(var(--navbar-height) + 1.1px);
+  margin-bottom: 50px;
 }
 
 nav .create {
