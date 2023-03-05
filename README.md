@@ -5,14 +5,14 @@
 Site link: https://sudoku-solver-website.netlify.app/
 It may take a while to load since I'm hosting the site on Netlify.
 
-## An image while it is on auto solve mode
-
-![Solving](/solving.png)
-
 ## Tech Stack
 
 React, JavaScript, CSS, HTML  
-react-router, react-icons
+react-icons
+
+## An image while it is on auto solve mode
+
+![Solving](/solving.png)
 
 ## The Project
 
