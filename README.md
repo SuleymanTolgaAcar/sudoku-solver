@@ -5,6 +5,8 @@
 Site link: https://sudoku-solver-website.netlify.app/
 It may take a while to load since I'm hosting the site on Netlify.
 
+![Sudoku Solver](/image.png)
+
 ## Tech Stack
 
 React, JavaScript, CSS, HTML  
