@@ -19,3 +19,7 @@ Moreover, you can create your own puzzles, and it will be stored in the local st
 ## How does it work?
 
 It uses the "Backtracking" algorithm with recursion to solve.
+
+## Design
+
+I used an animated gradient for the borders of most of the elements on the site. It also works well with different window sizes.
