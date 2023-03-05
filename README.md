@@ -5,6 +5,8 @@
 Site link: https://sudoku-solver-website.netlify.app/
 It may take a while to load since I'm hosting the site on Netlify.
 
+## An image while it is on auto solve mode
+
 ![Sudoku Solver](/image.png)
 
 ## Tech Stack
